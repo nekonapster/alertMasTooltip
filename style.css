@@ -14,15 +14,14 @@ h1 {
 
 nav {
   padding: 10px 50px 10px 50px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: gray;
 
-  flex-direction: row;
   display: flex;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 .texto {
@@ -114,33 +113,89 @@ h3 {
 
 /* alert */
 
-.alerta{
-    color: black;
-    font-weight: bolder;
-    /* color del fondo */
-    background-color: rgba(255, 99, 71, 0.700);
-    text-align: center;
-    line-height: 50px;
-    padding-right: 100px;
-    /* color de la linea a la izq. */
-    border-left: 6px solid rgb(77, 0, 0, 0.700);
-    
-    top: 400px;
-    position: absolute;
-    margin-left: 70px;
-    padding-left: 10px;
-}
+.alerta {
+  color: black;
+  font-weight: bolder;
+  /* color del fondo */
+  background-color: rgba(255, 99, 71, 0.7);
+  text-align: center;
+  line-height: 50px;
+  padding-right: 100px;
+  /* color de la linea a la izq. */
+  border-left: 6px solid rgb(77, 0, 0, 0.7);
 
+  top: 400px;
+  position: absolute;
+  margin-left: 70px;
+  padding-left: 10px;
+}
 
 /* boton cerrar alerta */
 
-.btn-cerrar{
-    font-size: 30px;
-    position: absolute;
-    right: 25px;
-    
+.btn-cerrar {
+  font-size: 30px;
+  position: absolute;
+  right: 25px;
 }
-.btn-cerrar:hover{
+.btn-cerrar:hover {
+  cursor: pointer;
+  color: white;
+}
+
+/* mediaqueries */
+
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  a {
+    line-height: 40px;
+    align-content: space-around;
+  }
+
+  /* tooltip */
+  .tooltip1,
+  .tooltip2,
+  .tooltip3 {
+    position: relative;
+    color: azure;
+  }
+
+  .tooltip1:hover .tooltip-box,
+  .tooltip2:hover .tooltip-box,
+  .tooltip3:hover .tooltip-box {
     cursor: pointer;
-    color: white;
+
+    visibility: visible;
+  }
+
+  .tooltip-box {
+    position: absolute;
+    width: 120px;
+    font-size: 10px;
+    text-align: center;
+    background-color: rgb(20, 20, 20);
+    border-radius: 5px;
+
+    left: 49vw;
+    bottom: 11px;
+    line-height: 20px;
+    z-index: 5;
+    display: none;
+  }
+
+  .tooltip-box::after {
+    content: "";
+    position: absolute;
+    /* se mueve de derecha a izquierda */
+    left: -12%;
+    /* se mueve de arriba abajo */
+    margin-top: -18px;
+    /* se hace mas grande o mas chico pero se descentra */
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent rgb(20, 20, 20) transparent transparent;
+  }
 }
