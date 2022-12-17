@@ -1,0 +1,146 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: JetBrains Mono;
+}
+
+h1 {
+  padding: 50px;
+  margin: 0px;
+  text-align: center;
+  background-color: lightslategray;
+}
+
+nav {
+  padding: 10px 50px 10px 50px;
+  justify-content: space-between;
+  background-color: gray;
+
+  flex-direction: row;
+  display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+.texto {
+  color: white;
+}
+
+.texto:hover {
+  cursor: pointer;
+}
+
+.row {
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+
+.row-i {
+  background-color: tan;
+  padding: 10px;
+  flex: 10%;
+}
+
+.row-c {
+  background-color: wheat;
+  padding: 10px;
+  flex: 66%;
+}
+
+.row-d {
+  background-color: tan;
+  padding: 10px;
+  flex: 10%;
+}
+
+footer {
+  height: 100px;
+  background-color: lightslategray;
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  margin: 0px;
+  padding-top: 20px;
+}
+
+/* tooltip */
+.tooltip1,
+.tooltip2,
+.tooltip3 {
+  position: relative;
+  color: azure;
+}
+
+.tooltip1:hover .tooltip-box,
+.tooltip2:hover .tooltip-box,
+.tooltip3:hover .tooltip-box {
+  cursor: pointer;
+
+  display: inline-block;
+}
+
+.tooltip-box {
+  position: absolute;
+  width: 120px;
+  font-size: 10px;
+  text-align: center;
+  background-color: rgb(20, 20, 20);
+  border-radius: 5px;
+
+  left: -37px;
+  bottom: 30px;
+  line-height: 20px;
+  z-index: 5;
+  display: none;
+}
+
+.tooltip-box::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-top: solid 10px rgb(20, 20, 20);
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+
+  left: 47px;
+}
+
+/* alert */
+
+.alerta{
+    color: black;
+    font-weight: bolder;
+    /* color del fondo */
+    background-color: rgba(255, 99, 71, 0.700);
+    text-align: center;
+    line-height: 50px;
+    padding-right: 100px;
+    /* color de la linea a la izq. */
+    border-left: 6px solid rgb(77, 0, 0, 0.700);
+    
+    top: 400px;
+    position: absolute;
+    margin-left: 70px;
+    padding-left: 10px;
+}
+
+
+/* boton cerrar alerta */
+
+.btn-cerrar{
+    font-size: 30px;
+    position: absolute;
+    right: 25px;
+    
+}
+.btn-cerrar:hover{
+    cursor: pointer;
+    color: white;
+}
